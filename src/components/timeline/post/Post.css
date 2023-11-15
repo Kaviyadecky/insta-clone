@@ -38,10 +38,15 @@
   align-items: center;
   justify-content: space-between;
 }
+.post__iconsMain{
+  font-size: 35px;
+}
+.post__iconSave{
+  font-size: 35px;
 
+}
 .postIcon {
   padding: 7px;
-  font-size: 30px;
 }
 
 .postIcon :hover {

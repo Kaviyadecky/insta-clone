@@ -35,15 +35,17 @@ function Post({ user, postImage, likes, timestamp }) {
       <div className="post__footer">
         <div className="post__footerIcons">
           <div className="post__iconsMain">
-            <FavoriteBorderIcon className="postIcon" />
-            <ChatBubbleOutlineIcon className="postIcon" />
-            <TelegramIcon className="postIcon" />
+            <FavoriteBorderIcon className="postIcon" fontSize="inherit" />
+            <ChatBubbleOutlineIcon className="postIcon" fontSize="inherit" />
+            <TelegramIcon className="postIcon" fontSize="inherit" />
           </div>
           <div className="post__iconSave">
-            <BookmarkBorderIcon className="postIcon" />
+            <BookmarkBorderIcon className="postIcon" fontSize="inherit" />
           </div>
         </div>
+        <span style={{fontSize:"14px"}}>
         Liked by {likes} people.
+        </span>
       </div>
     </div>
   );

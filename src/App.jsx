@@ -9,6 +9,7 @@ import { loginUser, setLoading } from "./features/userSlice";
 import { Route, Navigate, Routes } from "react-router-dom";
 import ExplorePage from "./pages/ExplorePage";
 import ProfilePage from "./pages/ProfilePage";
+import ReelsPage from "./pages/ReelsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -55,6 +56,7 @@ function App() {
               <Route path="/" element={<Homepage />} />
               <Route path="/explore" element={<ExplorePage />} />
               <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/reels" element={<ReelsPage />} />
             </>
           ) : (
             <Route path="/" element={<Authenticate />} />

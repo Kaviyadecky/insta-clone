@@ -94,10 +94,10 @@ function Sidenav() {
             <ExploreIcon fontSize="inherit" />
             <span>Explore</span>
           </button>
-          <button className={`sidenav__button ${isactive("reels")}`}>
-            <SlideshowIcon fontSize="inherit" />
-            <span>Reels</span>
-          </button>
+          <button onClick={() => navigate("/reels")} className={`sidenav__button ${isactive("reels")}`}>
+          <SlideshowIcon fontSize="inherit" />
+          <span>Reels</span>
+        </button>
           <button className={`sidenav__button ${isactive("messages")}`}>
             <ChatIcon fontSize="inherit" />
             <span>Messages</span>
@@ -112,21 +112,19 @@ function Sidenav() {
           <button className={`sidenav__button ${isactive("create")}`}>
             <AddCircleOutlineIcon fontSize="inherit" />
             <span>Create</span>
-          </button>
-
-          <button
-            onClick={() => navigate("/profile")}
-            className={`sidenav__button ${isactive("profile")}`}
-          >
-            <Avatar fontSize="inherit">
-              {user.username ? user.username.charAt(0).toUpperCase() : "A"}
-            </Avatar>
-            <span>{user.username} </span>
-          </button>
-          <button onClick={handelLogout} className="logout__button">
-            Logout
-          </button>
-
+          </button>    
+        <button
+          onClick={() => navigate("/profile")}
+          className={`sidenav__button ${isactive("profile")}`}
+        >
+          <Avatar fontSize="inherit">
+            {user.username ? user.username.charAt(0).toUpperCase() : "A"}
+          </Avatar>
+          <span>{user.username} </span>
+        </button>
+        <button onClick={handelLogout} className="logout__button">
+          Logout
+        </button>
           <button
             className="sidenav__button sidenav__more"
             onClick={handleDropdown}

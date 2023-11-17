@@ -65,3 +65,29 @@
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.424);
 }
+
+.res__sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: safe;
+  z-index: 1;
+  height: 100dvh;
+  border-right: 0.6px solid rgba(128, 128, 128, 0.516);
+  transition: width 1s ease;
+}
+
+.res__sidenav > img {
+  display: none;
+}
+
+.res__sidenav > .sidenav__buttons > button > span {
+  display: none;
+}
+
+.sidebar {
+  display: flex;
+}
+
+.create__title {
+  color: red !important;
+}

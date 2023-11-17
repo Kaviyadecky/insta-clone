@@ -58,7 +58,7 @@ function Sidenav() {
           <ExploreIcon fontSize="inherit" />
           <span>Explore</span>
         </button>
-        <button className={`sidenav__button ${isactive("reels")}`}>
+        <button onClick={() => navigate("/reels")} className={`sidenav__button ${isactive("reels")}`}>
           <SlideshowIcon fontSize="inherit" />
           <span>Reels</span>
         </button>

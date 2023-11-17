@@ -65,3 +65,22 @@
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.424);
 }
+/* Media quries */
+@media screen and (max-width:1500px) {
+  .sidenav__logo{
+    display: none;
+  }
+  .sidenav{
+    padding: 20px;
+    width: fit-content;
+  }
+  .logout__button{
+    display: none;
+  }
+  .sidenav__button{
+    margin: 15px;
+  }
+  .sidenav__buttons button span{
+    display: none;
+  }
+}

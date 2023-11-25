@@ -18,6 +18,13 @@
   z-index: 999;
   overflow-y: scroll;
   border: 1px solid rgb(80, 78, 78);
+  animation: spin 500ms ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(-100px);
+  }
 }
 
 .user {
@@ -64,4 +71,10 @@
   font-weight: 700px;
   color: rgb(255, 255, 255);
   cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  .notifications {
+    left: 70px;
+  }
 }

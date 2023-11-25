@@ -348,55 +348,54 @@ img {
     }
   }
 }
-.line-1{
+.line-1 {
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-.profile-btn{
+.profile-btn {
   margin-left: 15px;
   cursor: pointer;
 }
-.profile-btn button{
+.profile-btn button {
   cursor: pointer;
   margin: 5px;
   padding: 10px 15px;
-  background-color:rgba(119, 136, 153, 0.438);
+  background-color: rgba(119, 136, 153, 0.438);
   border-radius: 3px;
   border: none;
   outline: none;
   color: white;
   letter-spacing: 1px;
 }
-.profile-stats{
+.profile-stats {
   margin-left: -40px;
 }
-.profile-stats ul{ 
+.profile-stats ul {
   display: flex;
-
 }
-.profile-stats li{
+.profile-stats li {
   list-style: none;
   margin-right: 40px;
   font-size: 17px;
 }
-.line-3{
+.line-3 {
   font-size: 17px;
   margin-top: 10px;
 }
-.line-3 .line-4{
+.line-3 .line-4 {
   margin-top: 25px;
   margin-bottom: -10px;
 }
-.line-4 span{
+.line-4 span {
   font-weight: bolder;
 }
-hr{
+hr {
   width: 100%;
   margin: auto;
   border-color: #999999a1;
 }
-.center{
+.center {
   width: 70%;
   margin: auto;
   display: flex;
@@ -410,7 +409,7 @@ hr{
   letter-spacing: 2px;
   cursor: pointer;
 }
-.center div .btn{
+.center div .btn {
   padding: 10px 20px;
   background-color: transparent;
   border: none;
@@ -420,6 +419,16 @@ hr{
   cursor: pointer;
   margin-top: -1px;
 }
-.center div .btn:hover{
+.center div .btn:hover {
   border-top: 3px solid white;
+}
+
+@media (max-width: 650px) {
+  .line-3 {
+    text-align: center;
+    width: 100%;
+  }
+  .line-1 {
+    flex-wrap: nowrap;
+  }
 }

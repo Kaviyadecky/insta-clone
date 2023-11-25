@@ -17,11 +17,16 @@ import { auth } from "../../firebase";
 import { useLocation, useNavigate } from "react-router-dom";
 import Search from "../search/search";
 import Notifications from "../notifications/Notifications";
+import Modal from "@mui/material/Modal";
+import Create from "../Create/Create";
 
 function Sidenav() {
   const [resNav, setResNav] = useState(true);
   const [showSearch, setShowSearch] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const user = useSelector((state) => state.data.user.user);
   const navigate = useNavigate();
@@ -94,10 +99,13 @@ function Sidenav() {
             <ExploreIcon fontSize="inherit" />
             <span>Explore</span>
           </button>
-          <button onClick={() => navigate("/reels")} className={`sidenav__button ${isactive("reels")}`}>
-          <SlideshowIcon fontSize="inherit" />
-          <span>Reels</span>
-        </button>
+          <button
+            onClick={() => navigate("/reels")}
+            className={`sidenav__button ${isactive("reels")}`}
+          >
+            <SlideshowIcon fontSize="inherit" />
+            <span>Reels</span>
+          </button>
           <button className={`sidenav__button ${isactive("messages")}`}>
             <ChatIcon fontSize="inherit" />
             <span>Messages</span>
@@ -109,22 +117,33 @@ function Sidenav() {
             <FavoriteBorderIcon fontSize="inherit" />
             <span>Notifications</span>
           </button>
-          <button className={`sidenav__button ${isactive("create")}`}>
+          <button
+            className={`sidenav__button ${isactive("create")}`}
+            onClick={handleOpen}
+          >
             <AddCircleOutlineIcon fontSize="inherit" />
             <span>Create</span>
-          </button>    
-        <button
-          onClick={() => navigate("/profile")}
-          className={`sidenav__button ${isactive("profile")}`}
-        >
-          <Avatar fontSize="inherit">
-            {user.username ? user.username.charAt(0).toUpperCase() : "A"}
-          </Avatar>
-          <span>{user.username} </span>
-        </button>
-        <button onClick={handelLogout} className="logout__button">
-          Logout
-        </button>
+          </button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Create />
+          </Modal>
+          <button
+            onClick={() => navigate("/profile")}
+            className={`sidenav__button ${isactive("profile")}`}
+          >
+            <Avatar fontSize="inherit">
+              {user.username ? user.username.charAt(0).toUpperCase() : "A"}
+            </Avatar>
+            <span>{user.username} </span>
+          </button>
+          <button onClick={handelLogout} className="logout__button">
+            Logout
+          </button>
           <button
             className="sidenav__button sidenav__more"
             onClick={handleDropdown}

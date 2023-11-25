@@ -1,6 +1,5 @@
 import React from "react";
 import Sidenav from "../components/navigation/Sidenav";
-import ExploreSection from "../components/explore/ExploreSection";
 import ProfileSection from "../components/profile/ProfileSection";
 
 const ProfilePage = () => {

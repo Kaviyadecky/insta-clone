@@ -1,10 +1,9 @@
 .sidenav {
-  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: safe;
+  justify-content: space-between;
   z-index: 1;
-  height: 100dvh;
+  min-height: 100vh;
   padding-right: 50px;
   border-right: 0.6px solid rgba(128, 128, 128, 0.516);
 }
@@ -67,12 +66,11 @@
 }
 
 .res__sidenav {
-  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: safe;
+  justify-content: space-between;
   z-index: 1;
-  height: 100dvh;
+  height: 100vh;
   border-right: 0.6px solid rgba(128, 128, 128, 0.516);
   transition: width 1s ease;
 }
@@ -93,22 +91,40 @@
   color: red !important;
 }
 
-  /* Media quries */
-  @media screen and (max-width:756px) {
-    .sidenav__logo{
-      display: none;
-    }
-    .sidenav{
-      padding: 20px;
-      width: fit-content;
-    }
-    .logout__button{
-      display: none;
-    }
-    .sidenav__button{
-      margin: 15px;
-    }
-    .sidenav__buttons button span{
-      display: none;
-    }
+/* Media quries */
+@media screen and (max-width: 1150px) {
+  .sidenav__logo {
+    display: none;
   }
+  .res__sidenav > .sidenav__logo {
+    margin: 0 !important;
+  }
+  .sidenav {
+    padding: 20px;
+    width: fit-content;
+  }
+
+  .res__sidenav {
+    padding: 20px;
+    width: fit-content;
+  }
+
+  .logout__button {
+    display: none;
+  }
+  .sidenav__button {
+    margin: 15px 0px;
+    padding: 15px 0px;
+    height: 25px;
+    width: 25px;
+  }
+  .sidenav__buttons button span {
+    display: none;
+  }
+}
+
+/* @media (max-width: 1240px) {
+  .sidenav {
+    position: relative;
+  }
+} */

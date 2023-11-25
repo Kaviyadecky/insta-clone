@@ -10,3 +10,19 @@
 .timeline__right {
   flex: 0.3;
 }
+.timeline__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1150px) {
+  .timeline__left {
+    flex: 1;
+  }
+  .timeline__right {
+    display: none;
+    flex: 0;
+  }
+}

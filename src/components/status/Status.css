@@ -1,21 +1,28 @@
+:root {
+  --my-gradient: linear-gradient(to bottom, #ff8a00, #da1b60); /* define gradient variable */
+}
 .avatar-box {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   aspect-ratio: 1/1;
-  background-image: linear-gradient(160deg, #1d1ce5 5%, #ea047e, #ffd372);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+  position: relative;
+  background: var(--my-gradient); 
+  border: 2px solid #000;
+  
 }
 .avatar-profile-image {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   margin: 3px;
-  border: 3px solid white;
+  outline: 4px solid #000;  
 }
+
 .carousel-status {
   padding: 16px 0px;
 }
@@ -36,6 +43,7 @@
 .avatar-detail {
   margin-left: 20px;
   text-align: center;
+  cursor: pointer;
 }
 .avatar-name {
   font-size: 12px;
@@ -48,13 +56,13 @@
 .check {
   position: relative;
   margin-top: 10px;
-  width: 700px;
+  width: 630px;
 }
 .arrow-btn {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #bebdbdb0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -68,12 +76,12 @@
   height: 10px;
 }
 .left-icon {
-  left: 10px;
-  top: 40px;
+  left: -10px;
+  top: 25px;
 }
 .right-icon {
-  right: 10px;
-  top: 40px;
+  right: -30px;
+  top: 25px;
 }
 
 @media (max-width: 720px) {

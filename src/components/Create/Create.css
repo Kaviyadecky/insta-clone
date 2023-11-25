@@ -55,6 +55,7 @@
   padding: 8px;
   margin-top: 10px !important;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .create__label {
